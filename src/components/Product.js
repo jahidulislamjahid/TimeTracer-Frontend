@@ -19,8 +19,8 @@ const Product = ({ product }) => {
           </div>
           <Card.Body>
             <Card.Title className="text-uppercase">{title}</Card.Title>
-            <Card.Title>Price:$ {price}.00</Card.Title>
-            <Card.Text>{desc.slice(0, 50)}</Card.Text>
+            <Card.Title>Price:$ {price}</Card.Title>
+            <Card.Text>{desc.slice(0, 50)}...</Card.Text>
             <Card.Text>
               Rating:{" "}
               <Rating
