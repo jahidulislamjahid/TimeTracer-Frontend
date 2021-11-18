@@ -1,0 +1,37 @@
+#banner {
+    position: relative;
+    height:500px;
+    width:100%;
+    overflow: hidden;
+}
+#videobcg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    height:auto;
+    width:100%;
+    z-index: -100;
+}
+#fancy-text{
+    font-family: roboto;
+    color: white;
+    margin-top: 2em;
+    font-size: 4em;
+}
+
+@media only screen and (max-width: 600px){
+    #fancy-text{
+        margin-bottom: 0;
+        margin-top: 1em;
+        font-size: 30px;
+    }
+    #banner{
+        height: auto;
+    }
+    .input-newslater{
+        width: fit-content;
+        margin: 0;
+        padding: 0;
+    }
+}

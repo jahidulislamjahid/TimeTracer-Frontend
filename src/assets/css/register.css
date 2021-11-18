@@ -1,0 +1,31 @@
+
+.formContainer {
+  width: 100%;
+  max-width: 450px !important;
+}
+.registerForm input {
+  display: block;
+  margin: 20px 0;
+}
+
+.register-btn {
+  background-color: #0b5ed7;
+  color: white;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.register-btn:hover {
+  color: black;
+}
+
+.spinner-border {
+  height: 20px !important;
+  width: 20px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.private-spinner .spinner-border {
+  height: 200px !important;
+  width: 200px !important;
+}

@@ -1,0 +1,23 @@
+body{
+  font-family: roboto;
+}
+ul>li{
+  list-style: none;
+}
+
+.app-button{
+  background-image: linear-gradient(45deg, blue, cyan);
+  box-shadow: 3px 3px 1px rgb(5, 42, 66);
+}
+.social-icons:hover{
+  transform: scale(1.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  background-color: dodgerblue    ;
+}
+
+@media only screen and (max-width: 600px){
+  .social-icons{
+      margin: auto;
+  }
+}

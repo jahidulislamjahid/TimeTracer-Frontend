@@ -1,0 +1,33 @@
+.log-left{
+  height: 75vh;
+  padding: 2em;
+  background-color: rgba(12, 12, 146, 0.37);
+  margin-top: 5em;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.log-right{
+  height: 75vh;
+  padding: 2em;
+  background-color: white;
+  margin-top: 5em;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+@media only screen and (max-width: 600px){
+  .log-left{
+      margin-top: 2em;
+      padding-top: 0;
+      font-size: 14px;
+      height: 45vh;
+  }
+  .log-right{
+      margin-top: 2em;
+      padding-top: 0;
+      font-size: 14px;
+      height: 45vh;
+  }
+  .log-photo{
+    display: none;
+  }
+}

@@ -1,0 +1,37 @@
+.navBar {
+  background-color:rgb(13, 110, 253);
+  color: #fff !important;
+}
+
+.navbar-nav a {
+  font-weight: bold !important;
+  color: #fff !important;
+}
+.navbar-nav a.current {
+  color: rgb(243, 102, 184) !important;
+}
+.navbar-nav a button.login-button {
+  background: linear-gradient(
+    335.64deg,
+    #10cedb -19.22%,
+    #1317ff 118.87%
+  ) !important;
+  padding: 8px 25px !important;
+  color: #fff !important;
+  border-radius: 52px !important;
+  border: 0;
+  box-shadow: 3px 3px 1px rgb(5, 42, 66);
+}
+.login-button:hover{
+  transform: scale(0.9);
+  transition: 0.3s;
+}
+.ms-auto.navbar-nav {
+  align-items: center;
+}
+@media screen and (max-width: 992px) {
+  .ms-auto.navbar-nav {
+    margin: auto;
+    text-align: center;
+  }
+}
