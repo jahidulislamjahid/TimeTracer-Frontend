@@ -6,7 +6,7 @@ import { Button, Card } from "react-bootstrap";
 import toast from "react-hot-toast";
 import swal from "sweetalert";
 import "../../Home/Testimonials/Testimonials.css";
-import AddReview from "./AddReview";
+
 
 const Review = ({
   review: { name, description, address, img, _id },
@@ -23,7 +23,7 @@ const Review = ({
       if (wantDelete) {
         const loading = toast.loading("Deleting...Please wait!");
         axios
-          .delete(`http://localhost:5000/${id}`)
+          .delete(`https://sheltered-dusk-34885.herokuapp.com/${id}`)
           .then((res) => {
             toast.dismiss(loading);
             if (res.data) {

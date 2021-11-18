@@ -19,7 +19,7 @@ const UpdateProduct = () => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/updateOne/${id}`)
+    fetch(`https://sheltered-dusk-34885.herokuapp.com/updateOne/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -37,7 +37,7 @@ const UpdateProduct = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `http://localhost:5000/updateProduct?id=${id}`,
+          `https://sheltered-dusk-34885.herokuapp.com/updateProduct?id=${id}`,
           {
             method: "put",
             headers: { "content-type": "application/json" },
