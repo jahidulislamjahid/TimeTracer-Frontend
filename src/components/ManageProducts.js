@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const ManageProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://timetracer.vercel.app/products")
+    fetch(`${process.env.REACT_APP_SERVER}/products`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -29,7 +29,7 @@ const ManageProducts = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://timetracer.vercel.app/deleteProduct/${id}`, {
+        fetch(`${process.env.REACT_APP_SERVER}/deleteProduct/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

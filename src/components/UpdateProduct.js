@@ -19,7 +19,7 @@ const UpdateProduct = () => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    fetch(`https://timetracer.vercel.app/updateOne/${id}`)
+    fetch(`${process.env.REACT_APP_SERVER}/updateOne/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -37,7 +37,7 @@ const UpdateProduct = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `https://timetracer.vercel.app/updateProduct?id=${id}`,
+          `${process.env.REACT_APP_SERVER}/updateProduct?id=${id}`,
           {
             method: "put",
             headers: { "content-type": "application/json" },

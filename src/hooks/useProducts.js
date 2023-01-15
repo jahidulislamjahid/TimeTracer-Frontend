@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 const useProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://timetracer.vercel.app/products")
+    fetch(`${process.env.REACT_APP_SERVER}/products`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

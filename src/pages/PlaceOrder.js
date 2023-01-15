@@ -12,7 +12,7 @@ const PlaceOrder = () => {
   const [product, setProduct] = useState({});
   const { displayName, email } = useContexts();
   useEffect(() => {
-    fetch(`https://timetracer.vercel.app/placeorder/${id}`)
+    fetch(`${process.env.REACT_APP_SERVER}/placeorder/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [id]);
@@ -26,7 +26,7 @@ const PlaceOrder = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch("https://timetracer.vercel.app/placeorder", {
+        fetch(`${process.env.REACT_APP_SERVER}/placeorder`, {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify({ ...data, ...product }),

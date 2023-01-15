@@ -9,7 +9,7 @@ const MakeAdmin = () => {
 
   const onSubmit = (data) => {
     axios
-      .put("https://timetracer.vercel.app/addAdmin", data)
+      .put(`${process.env.REACT_APP_SERVER}/addAdmin`, data)
       .then((res) => {
         if (res?.data?.modifiedCount) {
           reset();

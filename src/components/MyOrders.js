@@ -10,7 +10,7 @@ const Orders = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://timetracer.vercel.app/orders?email=${email}`)
+    fetch(`${process.env.REACT_APP_SERVER}/orders?email=${email}`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -27,7 +27,7 @@ const Orders = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://timetracer.vercel.app/placeorder/${id}`, {
+        fetch(`${process.env.REACT_APP_SERVER}/placeorder/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

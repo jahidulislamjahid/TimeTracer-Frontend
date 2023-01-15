@@ -25,7 +25,7 @@ const AddProduct = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch("https://timetracer.vercel.app/addProduct", {
+        fetch(`${process.env.SERVER_API}/addProduct`, {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(data),

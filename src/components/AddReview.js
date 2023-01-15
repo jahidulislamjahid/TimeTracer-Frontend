@@ -24,7 +24,7 @@ const AddReview = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch("https://timetracer.vercel.app/addReview", {
+        fetch(`${process.env.REACT_APP_SERVER}/addReview`, {
           method: "post",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(data),

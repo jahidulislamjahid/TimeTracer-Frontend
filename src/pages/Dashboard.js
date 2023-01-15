@@ -21,7 +21,7 @@ const Dashboard = () => {
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch(`https://timetracer.vercel.app/admin/${email}`)
+    fetch(`${process.env.REACT_APP_SERVER}/admin/${email}`)
       .then((res) => res.json())
       .then((data) => {
         setUser(data);

@@ -12,7 +12,7 @@ const Testimonials = () => {
   const [loading, setLoading] = useState(true);
   const [Reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("https://timetracer.vercel.app/reviews")
+    fetch(`${process.env.REACT_APP_SERVER}/reviews`)
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);
