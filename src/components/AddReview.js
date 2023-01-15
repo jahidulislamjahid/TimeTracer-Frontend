@@ -13,7 +13,7 @@ const AddReview = () => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
-    data.img = photoURL || "https://i.ibb.co/5GzXkwq/user.png";
+    data.img = photoURL || process.env.PUBLIC_URL + "../assets/images/bgReg.jpg";
     data.email = email;
     data.rating = rating;
 
@@ -24,7 +24,7 @@ const AddReview = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch("https://sheltered-dusk-34885.herokuapp.com/addReview", {
+        fetch("https://timetracer.vercel.app/addReview", {
           method: "post",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(data),

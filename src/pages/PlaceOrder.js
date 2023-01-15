@@ -12,7 +12,7 @@ const PlaceOrder = () => {
   const [product, setProduct] = useState({});
   const { displayName, email } = useContexts();
   useEffect(() => {
-    fetch(`https://sheltered-dusk-34885.herokuapp.com/placeorder/${id}`)
+    fetch(`https://timetracer.vercel.app/placeorder/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [id]);
@@ -26,7 +26,7 @@ const PlaceOrder = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch("https://sheltered-dusk-34885.herokuapp.com/placeorder", {
+        fetch("https://timetracer.vercel.app/placeorder", {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify({ ...data, ...product }),

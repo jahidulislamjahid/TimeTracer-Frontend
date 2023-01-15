@@ -19,7 +19,7 @@ const UpdateProduct = () => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    fetch(`https://sheltered-dusk-34885.herokuapp.com/updateOne/${id}`)
+    fetch(`https://timetracer.vercel.app/updateOne/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -37,7 +37,7 @@ const UpdateProduct = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `https://sheltered-dusk-34885.herokuapp.com/updateProduct?id=${id}`,
+          `https://timetracer.vercel.app/updateProduct?id=${id}`,
           {
             method: "put",
             headers: { "content-type": "application/json" },

@@ -10,7 +10,7 @@ const Orders = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://sheltered-dusk-34885.herokuapp.com/orders?email=${email}`)
+    fetch(`https://timetracer.vercel.app/orders?email=${email}`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -27,7 +27,7 @@ const Orders = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://sheltered-dusk-34885.herokuapp.com/placeorder/${id}`, {
+        fetch(`https://timetracer.vercel.app/placeorder/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

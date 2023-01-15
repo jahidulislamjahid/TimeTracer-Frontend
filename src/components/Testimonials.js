@@ -12,7 +12,7 @@ const Testimonials = () => {
   const [loading, setLoading] = useState(true);
   const [Reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("https://sheltered-dusk-34885.herokuapp.com/reviews")
+    fetch("https://timetracer.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);

@@ -83,7 +83,7 @@ const useFirebase = () => {
 
   // add user to db
   function addUserToDB(name, email) {
-    fetch("https://sheltered-dusk-34885.herokuapp.com/users", {
+    fetch("https://timetracer.vercel.app/users", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ name, email }),
@@ -175,7 +175,7 @@ const useFirebase = () => {
   //add user to db(2)
   const saveUser = (email, name, method) => {
     const user = { email, name };
-    fetch("https://sheltered-dusk-34885.herokuapp.com/users", {
+    fetch("https://timetracer.vercel.app/users", {
       method: method,
       headers: {
         "content-type": "application/json",

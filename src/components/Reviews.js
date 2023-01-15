@@ -23,7 +23,7 @@ const Review = ({
       if (wantDelete) {
         const loading = toast.loading("Deleting...Please wait!");
         axios
-          .delete(`https://sheltered-dusk-34885.herokuapp.com/${id}`)
+          .delete(`https://timetracer.vercel.app/${id}`)
           .then((res) => {
             toast.dismiss(loading);
             if (res.data) {
